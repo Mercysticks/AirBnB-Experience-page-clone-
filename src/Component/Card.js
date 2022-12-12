@@ -13,23 +13,23 @@ function Card(props) {
   
     return (
       <div className="card">
-        {badgeText && <p className="card-badge">{badgeText}</p>}
+        {badgeText && <p className="card__badge">{badgeText}</p>}
         <img
           src={require(`../Asset/${props.card.coverImg}`)}
           alt=""
-          className="card-image"
+          className="card__image"
         />
-        <div className="card-text">
+        <div className="card-stats">
           <p>
-            <img src={star} alt="" className="star-icon" />
+            <img src={star} alt="" className="card__star" />
             {props.card.stats.rating + " "}
             <span className="text-gray">
               ({props.card.stats.reviewCount}) • {props.card.location}
             </span>
           </p>
-          <p className="card-title">{props.card.title}</p>
+          <p className="card__title">{props.card.title}</p>
           <p>
-            <span className="font-bold card-price">
+            <span className="bold card__price">
               From ${props.card.price}{" "}
             </span>
             / person
